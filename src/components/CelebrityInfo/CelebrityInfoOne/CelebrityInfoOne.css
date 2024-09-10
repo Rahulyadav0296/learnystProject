@@ -1,0 +1,61 @@
+.celebrity-info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  width: 100%;
+}
+
+.celebrity-info-labels,
+.celebrity-info-values {
+  display: contents;
+}
+
+.celebrity-info-label,
+.celebrity-info-value,
+.editable-input {
+  text-align: center;
+  padding: 10px; /* Add padding for consistent spacing */
+}
+
+.celebrity-info-label:first-child,
+.celebrity-info-value:first-child,
+.editable-input:first-child {
+  text-align: left;
+}
+
+.celebrity-info-label:last-child,
+.celebrity-info-value:last-child,
+.editable-input:last-child {
+  text-align: right;
+}
+
+.celebrity-info-inputs {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.editable-input-date {
+  background-color: transparent;
+  align-items: right;
+  color: white;
+  font-size: 24px;
+  width: 160px;
+  padding: 10px;
+  border-radius: 15px;
+  box-sizing: border-box; /* Ensure padding is included in size */
+}
+
+.editable-input-country {
+  background-color: transparent;
+  align-items: right;
+  margin-left: 120px;
+  color: white;
+  font-size: 24px;
+  width: 160px;
+  padding: 10px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  text-align: right;
+}

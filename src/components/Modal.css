@@ -1,0 +1,50 @@
+.modal-container {
+  width: 300px;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-shadow: 24px;
+  padding: 16px;
+  margin: auto;
+  margin-top: 15%;
+  text-align: center;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cancel-button-modal,
+.delete-button-modal {
+  background-color: #1976d2;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cancel-button-modal {
+  background-color: #f44336; /* Red */
+}
+
+.delete-button-modal {
+  background-color: #4caf50; /* Green */
+}

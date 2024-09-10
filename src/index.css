@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+  background-image: url("https://images.pexels.com/photos/2847648/pexels-photo-2847648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Celebrity Details Styling */
+.celebrity-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Celebrity Details Info */
+.celebrity-info {
+  width: 60%;
+  margin-top: 40px;
+  font-size: 25px;
+}
+
+.celebrity-info p {
+  margin: 10px 0;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  justify-content: right;
+  text-align: right;
+}
+
+.action-buttons button {
+  margin-right: 10px;
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+.cancel-button {
+  color: #f44336; /* Red */
+}
+
+.save-button {
+  color: #4caf50; /* Orange */
+}
+
+.delete-button {
+  color: #f44336; /* Red */
+
+  font-size: 24px;
+}
+
+.edit-button {
+  color: #4caf50; /* Green */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .form {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .search-input {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .celebrity-container {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .celebrity-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .celebrity-image {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action-buttons button {
+    width: 80%;
+    margin: 5px 0;
+  }
+}

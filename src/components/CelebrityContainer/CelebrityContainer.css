@@ -1,0 +1,56 @@
+.celebrity-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.1); /* Adjust the background color */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.celebrity-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.celebrity-name-container {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.celebrity-name-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.celebrity-name {
+  margin: 0;
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.editable-input-name {
+  margin-right: 5px;
+  font-size: 24px;
+  width: 200px;
+  padding: 5px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgb(150, 147, 147);
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.collapse-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  color: #ff9800; /* Orange color for the arrow */
+  font-size: 50px;
+  width: 50px;
+}

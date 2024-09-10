@@ -1,0 +1,28 @@
+.form {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 50px;
+}
+
+.search-container {
+  position: relative;
+  width: 250px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: gray;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px orange;
+  border: 1px solid #ccc;
+}
