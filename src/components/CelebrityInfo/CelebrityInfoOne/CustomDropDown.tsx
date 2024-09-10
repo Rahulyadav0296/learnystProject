@@ -15,7 +15,6 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
   onSelect,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [localOptions, setLocalOptions] = useState(options);
 
   const handleOptionClick = (option: string) => {
     onSelect(option);
@@ -40,7 +39,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
       </div>
       {isOpen && (
         <div className="custom-dropdown-options">
-          {localOptions.map((option) => (
+          {options.map((option) => (
             <div
               key={option}
               className="custom-dropdown-option"

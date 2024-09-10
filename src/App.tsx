@@ -107,7 +107,7 @@ const App: React.FC = () => {
     setOpen(false);
   };
 
-  const onImageChange = (event: ChangeEvent<HTMLInputElement>, id: number) => {
+  const onImageChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files[0]) {
       const updatedCelebrity = {
         ...editedCelebrity,
@@ -119,8 +119,7 @@ const App: React.FC = () => {
 
   // when user enter something that changes by this logic
   const handleInputChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
-    id: number
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
 
@@ -160,7 +159,7 @@ const App: React.FC = () => {
     setExpandedId((prev) => (prev === id ? null : id));
   };
 
-  const handleGenderChange = (gender: string, id: number) => {
+  const handleGenderChange = (gender: string) => {
     if (editedCelebrity) {
       const updatedCelebrity = { ...editedCelebrity, gender } as Celebrity;
       setEditedCelebrity(updatedCelebrity);
@@ -184,13 +183,13 @@ const App: React.FC = () => {
             {/* handle Image and name Component  */}
             <CelebrityContainer
               editable={editable && editedCelebrity?.id === celebrity.id}
-              onImageChange={(e) => onImageChange(e, celebrity.id)}
+              onImageChange={(e) => onImageChange(e)}
               celebrityDetails={
                 editable && editedCelebrity?.id === celebrity.id
                   ? editedCelebrity
                   : celebrity
               }
-              handleInputChange={(e) => handleInputChange(e, celebrity.id)}
+              handleInputChange={(e) => handleInputChange(e)}
               handleArrow={() => handleArrow(celebrity.id)}
               collapse={expandedId === celebrity.id}
             />
@@ -205,10 +204,8 @@ const App: React.FC = () => {
                       ? editedCelebrity
                       : celebrity
                   }
-                  handleInputChange={(e) => handleInputChange(e, celebrity.id)}
-                  handleGenderChange={(gender) =>
-                    handleGenderChange(gender, celebrity.id)
-                  }
+                  handleInputChange={(e) => handleInputChange(e)}
+                  handleGenderChange={(gender) => handleGenderChange(gender)}
                 />
 
                 {/* Handle Description  part in this component  */}
@@ -219,7 +216,7 @@ const App: React.FC = () => {
                       ? editedCelebrity
                       : celebrity
                   }
-                  handleInputChange={(e) => handleInputChange(e, celebrity.id)}
+                  handleInputChange={(e) => handleInputChange(e)}
                 />
                 <div className="action-buttons">
                   {editable && editedCelebrity?.id === celebrity.id ? (
