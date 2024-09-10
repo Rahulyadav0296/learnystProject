@@ -94,8 +94,8 @@ const App: React.FC = () => {
   }, []);
 
   const handleEdit = (celebrity: Celebrity) => {
-    console.log(celebrity);
-    setEditable(true);
+    console.log("Thed editable celebrity is: ", celebrity);
+    if (celebrity) setEditable(true);
     setEditedCelebrity({ ...celebrity });
   };
 
@@ -117,6 +117,7 @@ const App: React.FC = () => {
     }
   };
 
+  // when user enter something that changes by this logic
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
     id: number
@@ -133,22 +134,22 @@ const App: React.FC = () => {
     }
   };
 
-  const handleSave = () => {
-    console.log("celebrity detial who need to edit: ", editedCelebrity);
+  // Save the details of celebrity After editing
+  const handleSave = useCallback(() => {
     if (editedCelebrity) {
-      const updatedList = celebrityList.map((celebrity) =>
-        celebrity.id === editedCelebrity.id
-          ? { ...celebrity, ...editedCelebrity }
-          : celebrity
-      );
-      console.log("Updated List after saving:", updatedList); // Verify if the list is updated correctly
-
       // setSearchResults(updatedList);
-      setCelebrityList(updatedList);
+      setCelebrityList((prevResult) => {
+        const updatedList = prevResult.map((celebrity) =>
+          celebrity.id === editedCelebrity.id
+            ? { ...celebrity, ...editedCelebrity }
+            : celebrity
+        );
+        return updatedList;
+      });
       setEditable(false);
       setEditedCelebrity(null);
     }
-  };
+  }, [editedCelebrity]);
 
   const handleCancel = () => {
     setEditable(false);
@@ -168,6 +169,7 @@ const App: React.FC = () => {
 
   return (
     <div>
+      {/* Search Field  */}
       <Form
         search={search}
         onSubmit={handleSubmit}
@@ -179,6 +181,7 @@ const App: React.FC = () => {
       {showDetails &&
         searchResults.map((celebrity) => (
           <div className="celebrity-container" key={celebrity.id}>
+            {/* handle Image and name Component  */}
             <CelebrityContainer
               editable={editable && editedCelebrity?.id === celebrity.id}
               onImageChange={(e) => onImageChange(e, celebrity.id)}
@@ -194,6 +197,7 @@ const App: React.FC = () => {
 
             {expandedId === celebrity.id && (
               <div className="celebrity-info">
+                {/* handle Age, gender and country Component  */}
                 <CelebrityInfoOne
                   editable={editable && editedCelebrity?.id === celebrity.id}
                   celebrityDetails={
@@ -206,6 +210,8 @@ const App: React.FC = () => {
                     handleGenderChange(gender, celebrity.id)
                   }
                 />
+
+                {/* Handle Description  part in this component  */}
                 <CelebrityInfoTwo
                   editable={editable && editedCelebrity?.id === celebrity.id}
                   celebrityDetails={
@@ -224,6 +230,7 @@ const App: React.FC = () => {
                   ) : (
                     <EditActionButton
                       handleEdit={() => handleEdit(celebrity)}
+                      celebrity={celebrity}
                       handleOpen={handleOpen}
                     />
                   )}
