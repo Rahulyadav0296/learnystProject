@@ -1,5 +1,17 @@
 # React + TypeScript + Vite
 
+for run the following code please run below commands: 
+
+git clone: https://github.com/Rahulyadav0296/learnystProject.git
+
+npm install
+
+npm run dev
+
+The deployed code is: https://learnyst-project-3vo5-en8v3n5av-rahulyadav0296s-projects.vercel.app/
+
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
