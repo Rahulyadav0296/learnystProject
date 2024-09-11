@@ -26,3 +26,31 @@
   box-shadow: 0 5px 10px orange;
   border: 1px solid #ccc;
 }
+
+@media (max-width: 480px) {
+  .form {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .search-container {
+    width: 90%; /* Full width on mobile screens */
+  }
+
+  .search-input {
+    padding: 12px 12px 12px 40px;
+    font-size: 16px; /* Slightly larger text for better readability */
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .search-container {
+    width: 80%; /* Adjust width for tablet screens */
+  }
+
+  .search-input {
+    padding: 12px 12px 12px 40px;
+    font-size: 15px; /* Adjust font size for tablets */
+  }
+}

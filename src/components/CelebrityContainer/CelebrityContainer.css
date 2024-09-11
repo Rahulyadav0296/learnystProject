@@ -54,3 +54,59 @@
   font-size: 50px;
   width: 50px;
 }
+
+@media (max-width: 480px) {
+  .celebrity-header {
+    flex-direction: column;
+    width: 90%; /* Full width on smaller screens */
+    padding: 8px;
+  }
+
+  .celebrity-image {
+    width: 120px;
+    height: 120px; /* Reduce size for mobile */
+  }
+
+  .celebrity-name {
+    font-size: 20px; /* Smaller font size for mobile */
+  }
+
+  .editable-input-name {
+    font-size: 20px;
+    width: 180px; /* Slightly smaller input on mobile */
+    padding: 4px;
+  }
+
+  .collapse-button {
+    font-size: 40px; /* Smaller collapse button */
+    width: 40px;
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .celebrity-header {
+    width: 80%; /* Larger width for tablets */
+    padding: 8px;
+  }
+
+  .celebrity-image {
+    width: 130px;
+    height: 130px; /* Adjust size for tablets */
+  }
+
+  .celebrity-name {
+    font-size: 22px;
+  }
+
+  .editable-input-name {
+    font-size: 22px;
+    width: 190px;
+    padding: 5px;
+  }
+
+  .collapse-button {
+    font-size: 45px;
+    width: 45px;
+  }
+}

@@ -21,3 +21,35 @@
   display: block;
   line-height: 1.6;
 }
+
+@media (max-width: 480px) {
+  .celebrity-two-info {
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .editable-textarea {
+    font-size: 18px; /* Slightly smaller font for mobile screens */
+    height: 120px; /* Reduced height for smaller screens */
+    padding: 8px;
+  }
+
+  .celebrity-two-span {
+    font-size: 16px; /* Adjust line height and text size for readability */
+    line-height: 1.4;
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .editable-textarea {
+    font-size: 20px; /* Adjusted font size for tablets */
+    height: 130px;
+    padding: 10px;
+  }
+
+  .celebrity-two-span {
+    font-size: 18px; /* Adjust font size and line-height for tablets */
+    line-height: 1.5;
+  }
+}

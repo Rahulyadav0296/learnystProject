@@ -59,3 +59,59 @@
   box-sizing: border-box;
   text-align: right;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .celebrity-info-container {
+    grid-template-columns: 1fr; /* Single-column layout for mobile */
+    grid-gap: 5px;
+  }
+
+  .celebrity-info-inputs {
+    grid-template-columns: 1fr; /* Single column for inputs */
+  }
+
+  .celebrity-info-label,
+  .celebrity-info-value,
+  .editable-input {
+    font-size: 18px; /* Reduce font size for mobile */
+    padding: 8px; /* Adjust padding for mobile */
+  }
+
+  .editable-input-date,
+  .editable-input-country {
+    font-size: 18px; /* Smaller font size for mobile */
+    width: 100%; /* Full width on mobile */
+    padding: 8px;
+    margin-left: 0; /* Remove left margin for mobile */
+    text-align: center; /* Center text alignment on mobile */
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .celebrity-info-container {
+    grid-template-columns: 1fr 1fr; /* Two-column layout for tablets */
+    grid-gap: 8px;
+  }
+
+  .celebrity-info-inputs {
+    grid-template-columns: 1fr 1fr; /* Two columns for inputs */
+  }
+
+  .celebrity-info-label,
+  .celebrity-info-value,
+  .editable-input {
+    font-size: 20px; /* Slightly larger font for tablets */
+    padding: 10px; /* Padding adjustment for tablets */
+  }
+
+  .editable-input-date,
+  .editable-input-country {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    margin-left: 0;
+    text-align: center;
+  }
+}

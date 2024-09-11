@@ -62,3 +62,44 @@
 .custom-dropdown-option:hover {
   background-color: #555;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .custom-dropdown {
+    width: 100%; /* Full width on mobile */
+    font-size: 16px; /* Reduce font size for mobile */
+    height: auto;
+  }
+
+  .custom-dropdown-selected {
+    font-size: 18px; /* Smaller font for mobile */
+    width: 100%; /* Full width */
+    padding: 12px;
+    height: auto; /* Remove fixed height */
+  }
+
+  .custom-dropdown-options {
+    width: 100%; /* Dropdown matches width of selected element */
+  }
+
+  .custom-dropdown-option {
+    padding: 12px;
+    font-size: 16px; /* Slightly smaller font size */
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .custom-dropdown {
+    width: 80%; /* Adjust width for tablets */
+  }
+
+  .custom-dropdown-selected {
+    font-size: 20px; /* Adjust font size for tablets */
+    width: 100%; /* Full width on tablets */
+  }
+
+  .custom-dropdown-option {
+    font-size: 18px; /* Adjust option font size */
+  }
+}

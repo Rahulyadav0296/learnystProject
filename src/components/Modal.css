@@ -48,3 +48,32 @@
 .delete-button-modal {
   background-color: #4caf50; /* Green */
 }
+
+@media (max-width: 480px) {
+  .modal-container {
+    width: 90%;
+    padding: 12px;
+    margin-top: 25%;
+  }
+
+  .cancel-button-modal,
+  .delete-button-modal {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 16px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .modal-container {
+    width: 80%;
+    margin-top: 20%;
+  }
+}
